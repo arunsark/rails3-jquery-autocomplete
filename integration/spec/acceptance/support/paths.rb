@@ -28,6 +28,11 @@ module NavigationHelpers
   def new_scoped_autocomplete_page
     "/scoped_autocompletes/new"
   end
+
+  def new_param_scoped_autocomplete_page
+    "/param_scoped_autocompletes/new"
+  end
+
 end
 
 RSpec.configuration.include NavigationHelpers, :type => :acceptance

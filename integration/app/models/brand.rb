@@ -15,6 +15,7 @@ class Brand < ActiveRecord::Base
   scope :active, where(:state => true)
   scope :with_address, joins(:address)
 
+  scope :custom_state, ->(state) { where(:state => state)}
   belongs_to :address
   # embeds_one :address
 end

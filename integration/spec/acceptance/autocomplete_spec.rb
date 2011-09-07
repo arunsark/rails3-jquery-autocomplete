@@ -77,5 +77,16 @@ feature "Autocomplete", %q{
       choose_autocomplete_result "Kappa"
       find_field("Brand name").value.should include("Kappa")
     end
+
+    scenario "Autocomplete with param scope" do
+      kappa_brand = Brand.find_by_name('Kappa')
+      kappa_brand.address = Address.create!
+      kappa_brand.save!
+      visit new_param_scoped_autocomplete_page
+      fill_in("Brand name", :with => "ka")
+      choose_autocomplete_result "Kappler"
+      find_field("Brand name").value.should include("Kappler")
+    end
+
   end
 end

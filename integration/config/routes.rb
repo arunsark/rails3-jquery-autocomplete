@@ -27,6 +27,10 @@ Integration::Application.routes.draw do
   resources :scoped_autocompletes do
     get :autocomplete_brand_name, :on => :collection
   end
+
+  resources :param_scoped_autocompletes do
+    get :autocomplete_brand_name, :on => :collection
+  end
 end
 #== Route Map
 # Generated on 25 Apr 2011 09:55
