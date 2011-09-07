@@ -25,7 +25,7 @@ module NavigationHelpers
     "/simple_forms/new"
   end
   
-  def new_scoped_cutocomplete_page
+  def new_scoped_autocomplete_page
     "/scoped_autocompletes/new"
   end
 end

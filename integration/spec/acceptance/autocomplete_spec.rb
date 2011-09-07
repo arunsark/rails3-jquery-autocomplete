@@ -72,7 +72,7 @@ feature "Autocomplete", %q{
       kappa_brand = Brand.find_by_name('Kappa')
       kappa_brand.address = Address.create!
       kappa_brand.save!
-      visit new_scoped_cutocomplete_page
+      visit new_scoped_autocomplete_page
       fill_in("Brand name", :with => "ka")
       choose_autocomplete_result "Kappa"
       find_field("Brand name").value.should include("Kappa")
